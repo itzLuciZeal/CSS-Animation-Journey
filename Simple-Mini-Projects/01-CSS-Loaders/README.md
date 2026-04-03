@@ -1,4 +1,4 @@
-# Mini Project 01: Simplistics CSS Loaders
+# Mini Project 01: Simplistic CSS Loaders
 
 This project focuses on creating simple loading animations using only CSS, avoiding the need for heavy GIFs or JavaScript.
 
