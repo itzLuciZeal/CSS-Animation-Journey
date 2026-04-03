@@ -4,7 +4,7 @@ body {
     margin: 0 auto;
     overflow: auto;
     overflow-x: hidden;
-    background-image: url(/imgs/sample-BG.png);
+    background-image: url(imgs/sample-BG.png);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -27,7 +27,7 @@ body {
 }
 
 #title {
-    background-image: url("/imgs/sample-BG.png");
+    background-image: url(imgs/sample-BG.png);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
