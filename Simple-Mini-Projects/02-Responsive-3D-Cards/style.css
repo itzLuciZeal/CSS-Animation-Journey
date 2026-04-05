@@ -5,7 +5,7 @@ body {
     justify-content: center;
     width: auto;
     height: 100vh;
-    background-image: url(imgs/snowy-mountain.png);
+    background-image: url(../assets/snowy-mountain.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
