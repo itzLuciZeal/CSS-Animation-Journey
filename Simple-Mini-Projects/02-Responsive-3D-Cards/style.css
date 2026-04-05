@@ -195,7 +195,7 @@ body {
     box-shadow: -1.2vh -.2vh 2.25vh rgb(0, 0, 0);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .first-prof, .second-prof, .third-prof {
         width: 85%; /* Now they will be wide and readable on phones */
         height: 60vh; /* Shorter height for mobile */
