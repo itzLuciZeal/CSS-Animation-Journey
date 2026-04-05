@@ -1,6 +1,6 @@
 # 🎨 CSS Animation & UI Design Lab
 
-Welcome to my specialized repository for my experimental simple projects that I will do. This is a documented timeline of my journey to master the **CSS architecture, and UI/UX design*. My vision is to build visually stunning, accessible, and lightweight interfaces that works well and harmonize with the code and design.
+Welcome to my specialized repository for my experimental simple projects that I will do. This is a documented timeline of my journey to master the **CSS architecture, and UI/UX design**. My vision is to build visually stunning, accessible, and lightweight interfaces that works well and harmonize with the code and design.
 
 ---
 
