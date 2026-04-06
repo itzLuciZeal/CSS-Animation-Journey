@@ -9,8 +9,8 @@ Welcome to my specialized repository for my experimental simple projects that I 
 ### 📂 [Simple-Mini-Projects](./Simple-Mini-Projects/)
 *A 10 mini projects to challenge myself in focusing on mastering specific CSS properties and layouts. The core idea is that I cannot use JavaScript, but only limit myself on using both HTML and CSS to master its structure*
 
-* **01-CSS-Loaders**: Using advanced masking, `-webkit-background-clip`, and basic animations. [Live Demo](https://itzlucizeal.github.io/CSS-Animation-Journey/Simple-Mini-Projects/01-CSS-Loaders/)
-* **02-Responsive-3D-Cards**: (Active) Implementing **3D Perspective**, **Glassmorphism**, and **Boolean Logic** via the Checkbox Hack and other pseudo-class. [Live Demo](https://itzlucizeal.github.io/CSS-Animation-Journey/Simple-Mini-Projects/02-Responsive-3D-Cards/)
+* **01-CSS-Loaders**: Using advanced masking, `-webkit-background-clip`, and basic animations. [Live Demo](https://itzlucizeal.github.io/CSS-Animation-Journey/Simple-Mini-Projects/Animation/_Loaders/)
+* **02-Responsive-3D-Cards**: (Active) Implementing **3D Perspective**, **Glassmorphism**, and **Boolean Logic** via the Checkbox Hack and other pseudo-class. [Live Demo](https://itzlucizeal.github.io/CSS-Animation-Journey/Simple-Mini-Projects/Responsive/_3D/_Cards/)
 * **03-Interactive-Math**: (Upcoming) Typography-focused design for educational content.
 
 ---
