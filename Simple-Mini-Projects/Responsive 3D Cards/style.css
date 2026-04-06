@@ -1,0 +1,440 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    min-height: 100vh;
+    background-image: url(../assets/media-2/snowy-mountain.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+html {
+    font-family: 'Courier', monospace, sans-serif;
+}
+
+.main-container {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 2vh;
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(1.2vh);
+    backdrop-filter: blur(1.2vh);
+    transition: backdrop-filter 0.5s ease, -webkit-backdrop-filter 0.5s ease;
+    overflow-x: hidden;
+}
+
+.main-container:hover {
+    -webkit-backdrop-filter: blur(.4vh);
+    backdrop-filter: blur(.4vh);
+}
+
+.main-container:has(.first-prof:hover, .second-prof:hover, .third-prof:hover, #title:hover, #team-prof:hover) {
+    -webkit-backdrop-filter: blur(1.7vh);
+    backdrop-filter: blur(1.7vh);
+}
+
+.snow-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 12%;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(to bottom, rgb(181, 97, 255), rgb(126, 208, 255), rgb(118, 205, 255), white, transparent);
+    filter: blur(4.5vh);
+    transform: scale(1.2);
+    pointer-events: none;
+}
+
+.menu-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    gap: 2vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 1.5vh; 
+    padding-left: 5vh;
+    padding-right: 5vh;
+    padding-bottom: 1.5vh;
+    padding-top: 1.5vh;
+    flex-grow: 1;
+    max-width: 80%;
+    font-weight: bold;
+    font-size: 3.5vh;
+    text-shadow: -.5vh .3vh 0.463vh rgba(131, 131, 131, 0.444);
+}
+
+.black-spades {
+    flex-grow: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-height: 6.5vh;
+    width: 6.5vh;
+    filter: invert() drop-shadow(-.5vh .3vh 0.463vh rgba(131, 131, 131, 0.444));
+    transform: rotateX(0deg) rotateY(0deg);
+    animation: rotate 5s ease-in-out;
+    transition: all .3s ease;
+}
+
+#team-prof {
+    width: 43vh;
+    height: auto;
+    border: .5vh rgba(161, 202, 255, 0.75) solid;
+    border-radius: 999vh;
+    box-shadow: -.25vh .5vh 1.5vh rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.001);
+    backdrop-filter: blur(2vh);
+    transition: all .3s ease;
+}
+
+#team-prof:hover {
+    transform: translateX(-.5vh) translateY(-.55vh);
+    box-shadow: -.25vh .5vh 1vh rgba(161, 202, 255, 0.75);
+    background-color: rgba(161, 202, 255, 0.75);
+    backdrop-filter: blur(.5vh);
+    border-color: white;
+}
+
+#team-prof:hover .black-spades {
+    transform: rotateY(180deg) rotateX(30deg) scale(.65) skew(15deg) perspective(70vh) translateX(3.5vh) translateY(-.3vh);
+    opacity: 0;
+}
+
+#team-prof:hover .text {
+    color: black;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2.5vh;
+    justify-content: center;
+    transform: translateY(5vh);
+    width: 100%;
+    height: auto;
+}
+
+.first-prof {
+    position: relative;
+    margin: 0;
+
+    background: linear-gradient(to top, rgba(11, 11, 55, 0.55), rgba(62, 65, 164, 0.442), rgba(199, 201, 255, 0.093), transparent, transparent);
+    width: 30%;
+    height: 75vh;
+    max-height: 95%;
+    transform: scale(1) translateX(0) translateY(0) rotateX(0deg);
+    transition: all .6s ease;
+    background-size: 400% 400%;
+    border-radius: 2.5vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.first-prof:hover {
+    transform: perspective(350vh) rotateX(-5deg) rotateY(5deg) translateX(1vh) translateY(-1vh);
+    background-size: 100% 100%;
+    background-position: 50%;
+    box-shadow: -1.2vh -.2vh 2.25vh rgb(0, 0, 0);
+}
+
+.first-prof:hover .bg-first {
+    opacity: .5;
+}
+
+.first-prof:hover .pattern-first {
+    opacity: .2;
+    background-position-x: 1vh;
+    background-position-y: 2vh;
+}
+
+.first-prof:hover .shining {
+    opacity: .4;
+    animation: shine 4s ease infinite;
+}
+
+.first-prof:hover #thorne-pic {
+    opacity: 1;
+    transform: translateY(-10deg);
+}
+
+.first-prof:hover #job-desc {
+    opacity: 1;
+}
+
+.first-prof:hover #name-person {
+    opacity: 1;
+}
+
+.second-prof {
+    position: relative;
+    margin: 0;
+    margin-top: 1vh;
+    margin-left: 1vh;
+    margin-bottom: 2vh;
+    background: linear-gradient(to top, rgba(11, 11, 55, 0.55), rgba(62, 65, 164, 0.442), rgba(199, 201, 255, 0.093), transparent, transparent);
+    width: 30%;
+    height: 75vh;
+    max-height: 95%;
+    transform: scale(1) translateX(0) translateY(0) rotateX(0deg);
+    transition: all .6s ease;
+    background-size: 400% 400%;
+    border-radius: 2.5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.second-prof:hover {
+    transform: perspective(350vh) rotateX(-5deg) rotateY(5deg) translateX(1vh) translateY(-1vh);
+    background-size: 100% 100%;
+    background-position: 50%;
+    border-top: .4vh solid rgb(0, 0, 0);
+    border-left: .4vh solid rgb(0, 0, 0);
+    box-shadow: -1.2vh -.2vh 2.25vh rgb(0, 0, 0);
+}
+
+.third-prof {
+    position: relative;
+    margin: 0;
+    margin-top: 1vh;
+    margin-left: 1vh;
+    margin-bottom: 2vh;
+    background: linear-gradient(to top, rgba(11, 11, 55, 0.55), rgba(62, 65, 164, 0.442), rgba(199, 201, 255, 0.093), transparent, transparent);
+    width: 30%;
+    height: 75vh;
+    max-height: 95%;
+    transform: scale(1) translateX(0) translateY(0) rotateX(0deg);
+    transition: all .6s ease;
+    background-size: 400% 400%;
+    border-radius: 2.5vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.third-prof:hover {
+    transform: perspective(350vh) rotateX(-5deg) rotateY(5deg) translateX(1vh) translateY(-1vh);
+    background-size: 100% 100%;
+    background-position: 50%;
+    border-top: .4vh solid rgb(0, 0, 0);
+    border-left: .4vh solid rgb(0, 0, 0);
+    box-shadow: -1.2vh -.2vh 2.25vh rgb(0, 0, 0);
+}
+
+.bg-first {
+    z-index: 1;
+    position: absolute;
+    background-image: url(../assets/media-2/velostream-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 2.5vh;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .6s ease;
+}
+
+.pattern-first {
+    z-index: 0;
+    position: absolute;
+    display: block;
+    width: 1000vh;
+    height: 1000vh;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 2.5vh;
+    filter: invert();
+    opacity: 0;
+    background-image: url(../assets/media-2/pattern-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 1vh;
+    transition: all .6s ease;
+}
+
+.shining {
+    z-index: -1;
+    border-radius: 2.5vh;
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    
+    background-image: linear-gradient(45deg, #ffb343, #4272ff, #ff7e42);
+    background-size: 100% 100%;
+    transition: all .5s ease;
+}
+
+
+.personal-info {
+    margin: 0;
+    /* background-color: rgb(62, 62, 0); */
+    z-index: 2;
+    position: relative;
+    display: flex;
+    width: 97%;
+    min-height: 10vh;
+    height: auto;
+    max-height: 50%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#name-person {
+    /* border: 2px white solid; */
+    padding-left: 3.25vh;
+    padding-bottom: 1.5vh;
+    margin: 0;
+    font-size: 4vh;
+    width: 100%;
+    min-height: 1vh;
+    height: auto;
+    max-height: 30%;
+    color: white;
+    opacity: 0;
+}
+
+#picture-and-desc {
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 70%;
+    /* border: 2px black solid; */
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+#thorne-pic {
+    position: relative;
+    /* border: 2px rgb(255, 0, 255) solid; */
+    height: 200vh;
+    width: auto;
+    max-height: 100%;
+    max-width: 70%;
+    transition: all .4s ease;
+    opacity: 0;
+}
+
+#thorne-pic:hover {
+    border-color: red;
+    transform: scale(1.05)
+}
+
+#job-desc {
+    height: 100vh;
+    width: 100vh;
+    max-height: 100%;
+    max-width: 40%;
+    /* border: 3px rgb(0, 106, 255) solid; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: white;
+    opacity: 0;
+}
+
+#job-title {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    min-height: 2.5vh;
+    max-height: 15%;
+    font-style: italic;
+    font-size: 1.7vh;
+    /* border: 2px blue solid; */
+}
+
+#short-desc {
+    font-size: 1.54vh;
+    font-style: italic;
+    width: 100%;
+    min-height: 2vh;
+    margin: 0;
+    padding: 0;
+    /* border: 2px indigo solid; */
+    text-align: left;
+    flex-shrink: 1;
+}
+
+
+.company {
+    /* background-color: rgba(47, 238, 255, 0.339); */
+    z-index: 2;
+    position: relative;
+    display: flex;
+    width: 97%;
+    height: 50%;
+    max-height: 50%;
+}
+
+.bold {
+    font-weight: bolder;
+}
+
+@keyframes shine {
+    50% {background-position: -110px; background-size: 400% 400%; opacity: .6;}
+}
+
+@media (max-width: 1024px) {
+    .first-prof, .second-prof, .third-prof {
+        width: 85%; /* Now they will be wide and readable on phones */
+        height: 60vh; /* Shorter height for mobile */
+        margin-bottom: 3vh;
+    }
+    
+    .menu-bar {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
