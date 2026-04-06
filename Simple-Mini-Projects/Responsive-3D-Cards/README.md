@@ -2,7 +2,7 @@
 
 This project is a deep dive into **Adaptive Engineering**, focusing on building a dual-purpose UI that transitions between "Team Directory" profiles and a "Problem of the Day" section. Engineered entirely with HTML5 and CSS3, it explores 3D space and logic-driven state management.
 
-## 🔗 [Live Demo](https://itzlucizeal.github.io/CSS-Animation-Journey/Simple-Mini-Projects/Responsive/_3D/_Cards/)
+## 🔗 [Live Demo](https://itzlucizeal.github.io/CSS-Animation-Journey/Simple-Mini-Projects/Responsive-3D-Cards/)
 
 ---
 

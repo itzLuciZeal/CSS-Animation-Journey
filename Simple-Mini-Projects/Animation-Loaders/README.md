@@ -2,7 +2,7 @@
 
 This project demonstrates high-performance UI components and loading animations engineered exclusively with CSS. By leveraging modern properties, these assets eliminate the need for JavaScript or heavy image files (GIFs), ensuring a lightweight and performant user experience.
 
-## 🔗 [Live Demo](https://itzlucizeal.github.io/CSS-Animation-Journey/Simple-Mini-Projects/01-CSS-Loaders/)
+## 🔗 [Live Demo](https://itzlucizeal.github.io/CSS-Animation-Journey/Simple-Mini-Projects/Animation-Loaders/)
 
 ---
 
