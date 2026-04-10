@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    user-select: none;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,7 +40,7 @@ html {
     backdrop-filter: blur(.5vh);
 }
 
-.main-container:has(.first-prof:hover, .second-prof:hover, .third-prof:hover, #title:hover, #team-prof:hover) {
+.main-container:has(.profile-card:hover, .second-prof:hover, .third-prof:hover, #title:hover, #team-prof:hover) {
     -webkit-backdrop-filter: blur(1.7vh);
     backdrop-filter: blur(1.7vh);
 }
@@ -150,7 +151,7 @@ html {
     height: auto;
 }
 
-.first-prof {
+.profile-card {
     position: relative;
     margin: 0;
     background: linear-gradient(to top, rgba(11, 11, 55, 0.55), rgba(62, 65, 164, 0.442), rgba(199, 201, 255, 0.093), transparent, transparent);
@@ -169,133 +170,88 @@ html {
     transform-style: preserve-3d;
 }
 
-.first-prof:hover {
+.profile-card:hover {
     transform: perspective(100vh) rotateX(-5deg) rotateY(5deg) translateX(1vh) translateY(-1vh);
     background-size: 100% 100%;
     background-position: 50%;
     box-shadow: -1.2vh -.2vh 2.25vh rgb(0, 0, 0);
 }
 
-.first-prof:hover .bg-first {
-    opacity: .5;
+.profile-card:hover .bg-first {
+    opacity: .3;
 }
 
-.first-prof:hover .pattern-first {
+.profile-card:hover .pattern-first {
     opacity: .2;
     background-position-x: 1vh;
     background-position-y: 2vh;
 }
 
-.first-prof:hover .shining {
+.profile-card:hover .shining {
     opacity: .4;
     animation: shine 5s ease infinite;
 }
 
-.first-prof:hover #thorne-pic {
+.profile-card:hover .shining-second {
+    opacity: .4;
+    animation: shine 5s ease infinite;
+}
+
+.profile-card:hover .shining-third {
+    opacity: .4;
+    animation: shine 5s ease infinite;
+}
+
+.profile-card:hover #thorne-pic {
     opacity: 1;
 }
 
-.first-prof:hover #logo {
+.profile-card:hover #logo {
     opacity: 1;
 }
 
-.first-prof:hover #name-person {
+.profile-card:hover #name-person {
     font-size: 4vh;
     opacity: 1;
 }
 
-.first-prof:hover #company-name {
+.profile-card:hover #company-name {
     font-size: 4vh;
     opacity: 1;
 }
 
-.first-prof:hover #job-title {
+.profile-card:hover #job-title {
     transform: none;
     opacity: 1;
 }
 
-.first-prof:hover #short-desc {
+.profile-card:hover #short-desc {
     transform: none;
     opacity: 1;
 }
 
-.first-prof:hover #company-desc {
+.profile-card:hover #company-desc {
     transform: none;
     opacity: 1;
 }
 
-.first-prof:hover #name-person::before {
+.profile-card:hover #name-person::before {
     opacity: 1;
     width: 100vh;
 }
 
-.first-prof:hover #company-name::before {
+.profile-card:hover #company-name::before {
     opacity: 1;
     width: 100vh;
 }
 
-.first-prof:hover .logo-social {
+.profile-card:hover .logo-social {
     opacity: 1;
-}
-
-.second-prof {
-    position: relative;
-    margin: 0;
-    margin-top: 1vh;
-    margin-left: 1vh;
-    margin-bottom: 2vh;
-    background: linear-gradient(to top, rgba(11, 11, 55, 0.55), rgba(62, 65, 164, 0.442), rgba(199, 201, 255, 0.093), transparent, transparent);
-    width: 30%;
-    height: 75vh;
-    max-height: 95%;
-    transform: scale(1) translateX(0) translateY(0) rotateX(0deg);
-    transition: all .6s ease;
-    background-size: 400% 400%;
-    border-radius: 2.5vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.second-prof:hover {
-    transform: perspective(350vh) rotateX(-5deg) rotateY(5deg) translateX(1vh) translateY(-1vh);
-    background-size: 100% 100%;
-    background-position: 50%;
-    box-shadow: -1.2vh -.2vh 2.25vh rgb(0, 0, 0);
-}
-
-.third-prof {
-    position: relative;
-    margin: 0;
-    margin-top: 1vh;
-    margin-left: 1vh;
-    margin-bottom: 2vh;
-    background: linear-gradient(to top, rgba(11, 11, 55, 0.55), rgba(62, 65, 164, 0.442), rgba(199, 201, 255, 0.093), transparent, transparent);
-    width: 30%;
-    height: 75vh;
-    max-height: 95%;
-    transform: scale(1) translateX(0) translateY(0) rotateX(0deg);
-    transition: all .6s ease;
-    background-size: 400% 400%;
-    border-radius: 2.5vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.third-prof:hover {
-    transform: perspective(350vh) rotateX(-5deg) rotateY(5deg) translateX(1vh) translateY(-1vh);
-    background-size: 100% 100%;
-    background-position: 50%;
-    box-shadow: -1.2vh -.2vh 2.25vh rgb(0, 0, 0);
 }
 
 .bg-first {
     z-index: 1;
     position: absolute;
-    background-image: url(../assets/media-2/velostream-bg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -304,6 +260,18 @@ html {
     width: 100%;
     height: 100%;
     transition: all .6s ease;
+}
+
+#VELO-BG {
+    background-image: url(../assets/media-2/velostream-bg.png);
+}
+
+#YGG-BG {
+    background-image: url(../assets/media-2/yggdrasil-bg.png);
+}
+
+#SYNAPSE-BG {
+    background-image: url(../assets/media-2/synapse-bg.png);
 }
 
 .pattern-first {
@@ -334,6 +302,34 @@ html {
     height: 100%;
     opacity: 0;
     background-image: linear-gradient(45deg, #ffb343, #4272ff, #ff7e42);
+    background-size: 100% 100%;
+    transition: all .5s ease;
+}
+
+.shining-second {
+    z-index: -1;
+    border-radius: 2.5vh;
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-image: linear-gradient(45deg, #00ff2a, #4272ff, #42ff7b);
+    background-size: 100% 100%;
+    transition: all .5s ease;
+}
+
+.shining-third {
+    z-index: -1;
+    border-radius: 2.5vh;
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-image: linear-gradient(45deg, #521708, #c342ff, #570936);
     background-size: 100% 100%;
     transition: all .5s ease;
 }
@@ -426,7 +422,7 @@ html {
     /* border: .5vh rgb(96, 255, 96) solid; */
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     align-content: space-evenly;
     flex-direction: column;
     text-shadow: -.1vh .1vh .1vh black;
@@ -548,7 +544,7 @@ html {
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     width: 100vh;
     height: 100vh;
     max-width: 40%;
@@ -593,10 +589,10 @@ html {
 }
 
 .logo-social {
-    padding: 1vh;
+    padding: .5vh;
     margin: .3vh;
     filter: drop-shadow(-1.5vh -.1vh 1vh rgba(0, 0, 0, 0.6));
-    /* border: solid .5vh #ff7e42; */
+    border-radius: 999vh;
     height: auto;
     opacity: 0;
     width: 4vh;
@@ -615,8 +611,14 @@ html {
     50% {background-position: -110px; background-size: 400% 400%; opacity: .6;}
 }
 
+@keyframes idle {
+    0% {transform: perspective(100vh) rotateX(-5deg) rotateY(5deg) translateX(1vh) translateY(-1vh);}
+    50% {transform: rotateX(-5deg) rotateY(5deg);}
+    100% {transform: perspective(100vh) rotateX(-5deg) rotateY(5deg) translateX(1vh) translateY(-1vh);}
+}
+
 @media (max-width: 1024px) {
-    .first-prof, .second-prof, .third-prof {
+    .profile-card, .second-prof, .third-prof {
         width: 85%; /* Now they will be wide and readable on phones */
         height: 60vh; /* Shorter height for mobile */
         margin-bottom: 3vh;
