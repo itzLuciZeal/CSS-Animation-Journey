@@ -27,5 +27,5 @@ Welcome to my specialized repository for my experimental simple projects that I 
 
 ## 🗺️ **CSS Roadmap**
 - [x] **Project 1**: Master CSS Masking & Loaders.
-- [ ] **Project 2**: Mastering 3D Space and Responsive Flexbox Logic.
+- [x] **Project 2**: Mastering 3D Space and Responsive Flexbox Logic.
 - [ ] **Project 3**: Implementing Complex Grid Layouts, Logic-Driven Styling, and Advanced Typography.

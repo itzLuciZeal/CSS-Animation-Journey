@@ -37,8 +37,7 @@ This project is explores the use of **flex box** to organize the information int
 ## 📈 **Future Improvements & Roadmap**
 
 - [x] **Implementation of Content**: Populating the 3 profile cards with specific hobbies, technical skills, and assets.
-- [ ] **Adaptive Stacking**: Finalizing media queries to ensure the Flexbox grid wraps perfectly for mobile devices.
-- [ ] **Scale Transitions**: Engineering the "Dispose & Arrive" animations to smoothly swap view containers.
+- [x] **Adaptive Stacking**: Finalizing media queries to ensure the flexbox wraps perfectly for mobile devices.
 
 ## ⚠️ **Project Disclaimer**
 
