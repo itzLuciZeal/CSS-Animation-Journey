@@ -169,7 +169,6 @@ html {
     height: 75vh;
     max-height: 95%;
     transform:  perspective(100vh) rotateX(5deg) translateX(-1vh) translateY(1vh);
-    transition: all .6s ease;
     background-size: 400% 400%;
     border-radius: 2.5vh;
 
@@ -178,6 +177,9 @@ html {
     align-items: center;
     justify-content: center;
     transform-style: preserve-3d;
+
+    transition: transform .6s ease, box-shadow .6s ease, background .6s ease;
+    will-change: transform; /* Tells the GPU to prepare for movement */
 }
 
 .profile-card::after, .profile-card::before {
@@ -206,28 +208,13 @@ html {
 }
 
 .profile-card:hover .bg-first {
-    opacity: .5;
+    opacity: .4;
 }
 
 .profile-card:hover .pattern-first {
-    opacity: .5;
+    opacity: .2;
     background-position-x: 1vh;
     background-position-y: 2vh;
-}
-
-.profile-card:hover .shining {
-    opacity: .4;
-    animation: shine 5s ease infinite;
-}
-
-.profile-card:hover .shining-second {
-    opacity: .4;
-    animation: shine 5s ease infinite;
-}
-
-.profile-card:hover .shining-third {
-    opacity: .4;
-    animation: shine 5s ease infinite;
 }
 
 .profile-card:hover #thorne-pic {
@@ -312,54 +299,12 @@ html {
     max-height: 100%;
     border-radius: 2.5vh;
     filter: invert();
-    opacity: 0.5;
+    opacity: 0;
     background-image: url(../assets/media-2/pattern-2.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: 1vh;
     transition: all .6s ease;
-}
-
-.shining {
-    z-index: -1;
-    border-radius: 2.5vh;
-    position: absolute;
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background-image: linear-gradient(45deg, #ffb343, #4272ff, #ff7e42);
-    background-size: 100% 100%;
-    transition: all .5s ease;
-}
-
-.shining-second {
-    z-index: -1;
-    border-radius: 2.5vh;
-    position: absolute;
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background-image: linear-gradient(45deg, #00ff2a, #4272ff, #42ff7b);
-    background-size: 100% 100%;
-    transition: all .5s ease;
-}
-
-.shining-third {
-    z-index: -1;
-    border-radius: 2.5vh;
-    position: absolute;
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background-image: linear-gradient(45deg, #521708, #c342ff, #570936);
-    background-size: 100% 100%;
-    transition: all .5s ease;
 }
 
 .personal-info {
@@ -637,10 +582,6 @@ html {
     background-image: linear-gradient(rgba(121, 210, 255, 0.2), transparent);
     backdrop-filter: blur(2rem);
 } */
-
-@keyframes shine {
-    50% {background-position: -110px; background-size: 400% 400%; opacity: .6;}
-}
 
 @keyframes idle {
     0% {transform: perspective(100vh) rotateX(-5deg) rotateY(5deg) translateX(1vh) translateY(-1vh);}
