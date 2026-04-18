@@ -1,10 +1,10 @@
-# **Mini-Project 1**: *Animation Loaders*
+# **Mini-Project 1**: Animation Loaders
 
-This project demonstrates **simple UI components** and **loading animations** engineered exclusively with CSS. By leveraging modern properties, these assets eliminate the need for JavaScript ensuring a lightweight and performant user experience.
+_This project demonstrates **simple UI components** and **loading animations** engineered exclusively with CSS. By leveraging modern properties, these assets eliminate the need for JavaScript ensuring a lightweight and performant user experience._
 
 ## 🔗 [**Live Demo**](https://itzlucizeal.github.io/CSS-Animation-Journey/Simple-Mini-Projects/Animation-Loaders/)
 
-## ✨ **Key Features**
+## **Key Features**
 
 * **Gradient Masked Spinner**: Utilizes `-webkit-mask-composite` and `destination-out` to render a hollow, high-fidelity gradient ring that is fully scalable.
 * **Procedural Dotted Loader**: A complex animation generated from a **single HTML element** using a multi-layered `box-shadow` coordinate system.
@@ -12,28 +12,28 @@ This project demonstrates **simple UI components** and **loading animations** en
 
 ---
 
-## 🧪 **Technical Challenges & Solutions**
+## **Technical Challenges & Solutions**
 
-1. ### *Advanced Alpha Masking*
+1. ### Advanced Alpha Masking
     **Challenge**: Creating a hollow circular spinner where the center is transparent, allowing the background to show through.
 
     **Solution**: Implemented `mask-composite: exclude` (and `-webkit-mask-composite: destination-out`) combined with `padding-box` gradients to "punch a hole" through the border-box.
 
-2. ### *Geometric Shadow Layering*
+2. ### Geometric Shadow Layering
     **Challenge**: Animating multiple particles without bloating the DOM with dozens of `div` tags.
 
     **Solution**: Architected a procedural `box-shadow` system. By defining multiple X/Y offsets within a single property, I reduced the DOM footprint to one node, significantly improving render efficiency.
 
 ---
 
-## 📸 **Technical Mastery & Outcomes**
+## **Technical Mastery & Outcomes**
 
 * **Performance Optimization**: Mastered the use of hardware-accelerated CSS properties to ensure smooth 60FPS animations.
 * **Dynamic Typography**: Implemented `-webkit-background-clip: text` paired with `background-attachment: fixed` to create synchronized, high-contrast scrolling text effects.
 
 ---
 
-## 🛠️ **Implementation Specs**
+## **Implementation Specs**
 
 | Property | Use Case | Benefit |
 | :--- | :--- | :--- |
