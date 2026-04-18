@@ -12,6 +12,10 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;
 }
 
 html {
@@ -145,7 +149,7 @@ html {
     flex-wrap: wrap;
     align-items: center;
     gap: 2.5vh;
-    justify-content: center;
+    justify-content: space-evenly;
     transform: translateY(5vh);
     width: 100%;
     height: auto;
@@ -335,8 +339,8 @@ html {
 }
 
 .personal-info {
+    outline: .5vh red solid;
     margin: 0;
-    /* background-color: rgb(30, 40, 150); */
     z-index: 2;
     position: relative;
     display: flex;
@@ -390,7 +394,7 @@ html {
     position: relative;
     width: 100%;
     height: 70%;
-    /* border: .5vh black solid; */
+    outline: .5vh black solid;
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
@@ -399,7 +403,7 @@ html {
 
 #thorne-pic {
     position: relative;
-    /* border: .5vh pink solid; */
+    outline: .5vh pink solid;
     height: 200vh;
     width: auto;
     max-height: 100%;
@@ -419,7 +423,7 @@ html {
     width: 100vh;
     max-height: 100%;
     max-width: 45%;
-    /* border: .5vh rgb(96, 255, 96) solid; */
+    outline: .5vh rgb(96, 255, 96) solid;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -442,7 +446,7 @@ html {
     transition: opacity .6s ease;
     transform: scale(1.1);
     transition: all .6s ease;
-    /* border: .5vh rgb(119, 156, 255) solid; */
+    outline: .5vh rgb(119, 156, 255) solid;
 }
 
 #short-desc {
@@ -456,11 +460,11 @@ html {
     flex-shrink: 1;
     transform: scale(1.1);
     transition: all .6s ease;
-    /* border: .5vh rgb(170, 50, 255) solid; */
+    outline: .5vh rgb(170, 50, 255) solid;
 }
 
 .company {
-    /* background-color: rgb(20, 110, 118); */
+    outline: .5vh rgb(20, 110, 118) solid;
     z-index: 2;
     position: relative;
     display: flex;
@@ -510,6 +514,7 @@ html {
 }
 
 #company-info {
+    outline: .5vh blueviolet solid;
     margin: 0;
     display: flex;
     position: relative;
@@ -520,7 +525,6 @@ html {
     height: 100vh;
     max-width: 100%;
     max-height: 70%;
-    /* border: .5vh palevioletred solid; */
 }
 
 #logo {
@@ -540,7 +544,7 @@ html {
     position: relative;
     font-size: 1.55vh;
     text-shadow: -.1vh .1vh .1vh black;
-    /* border: .5vh rebeccapurple solid; */
+    outline: .5vh rebeccapurple solid;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -557,7 +561,7 @@ html {
     max-width: 97%;
     max-height: 80%;
     height: auto;
-    /* border: .5vh tomato solid; */
+    outline: .5vh rgb(191, 255, 0) solid;
     transform: scale(1.1);
     opacity: 0;
     flex-shrink: 1;
@@ -570,14 +574,14 @@ html {
     height: 100vh;
     max-height: 10%;
     max-width: 97%;
-    /* border: .5vh yellow solid; */
+    outline: .5vh yellow solid;
 }
 
 #social-list {
     position: relative;
     margin: 0;
     padding: 0;
-    /* border: red solid .5vh; */
+    outline: red solid .5vh;
     height: 100vh;
     width: 100vh;
     max-width: 100%;
@@ -589,6 +593,7 @@ html {
 }
 
 .logo-social {
+    outline: .5vh purple solid;
     padding: .5vh;
     margin: .3vh;
     filter: drop-shadow(-1.5vh -.1vh 1vh rgba(0, 0, 0, 0.6));
@@ -617,11 +622,72 @@ html {
     100% {transform: perspective(100vh) rotateX(-5deg) rotateY(5deg) translateX(1vh) translateY(-1vh);}
 }
 
-@media (max-width: 1024px) {
-    .profile-card, .second-prof, .third-prof {
-        width: 85%; /* Now they will be wide and readable on phones */
-        height: 60vh; /* Shorter height for mobile */
-        margin-bottom: 3vh;
+@media (max-width: 425px) {
+    .main {
+        outline: 1vh blue solid;
+    }
+
+    .text {
+        font-size: 1.3rem;
+    }
+
+    #team-prof {
+        margin-top: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .profile-card {
+        width: 90%;
+        height: 90vh;
+        margin-bottom: 5vh;
+
+        &:hover {
+            & #name-person {
+                font-size: 1.6rem;
+                opacity: 1;
+            }
+
+            & #company-name {
+                font-size: 1.6rem;
+                opacity: 1;
+            }
+
+        }
+    }
+
+    #thorne-pic {
+        bottom: 0;
+        height: 100vh;
+        width: auto;
+        max-height: 30%;
+        max-width: 100%;
+    }
+    
+    #picture-and-desc {
+        margin: 0;
+        position: relative;
+        width: 100%;
+        height: 80%;
+        outline: .5vh black solid;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap-reverse;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #job-desc {
+        height: auto;
+        width: 100vh;
+        max-width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        align-content: space-evenly;
+        flex-direction: column;
+        text-shadow: -.1vh .1vh .1vh black;
+        color: white;
     }
     
     .menu-bar {
@@ -630,5 +696,116 @@ html {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+    }
+
+    #logo {
+        outline: .5vh tomato solid;
+        position: absolute;
+        bottom: 0;
+        height: 40%;
+    }
+
+    #company-info {
+        max-height: 85%;
+    }
+
+    #short-info {
+        max-width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 1780px) and (min-width: 500px) {
+        .main {
+        outline: 1vh blue solid;
+    }
+
+    .text {
+        font-size: 1.8rem;
+    }
+
+    #team-prof {
+        margin-top: 2rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .profile-card {
+        width: 50vh;
+        height: 70vh;
+        margin-bottom: 5vh;
+
+        &:hover {
+            & #name-person {
+                font-size: 1.6rem;
+                opacity: 1;
+            }
+
+            & #company-name {
+                font-size: 1.6rem;
+                opacity: 1;
+            }
+
+        }
+    }
+
+    #thorne-pic {
+        bottom: 0;
+        height: 100vh;
+        width: auto;
+        max-height: 40%;
+        max-width: 100%;
+    }
+    
+    #picture-and-desc {
+        margin: 0;
+        position: relative;
+        width: 100%;
+        height: 80%;
+        outline: .5vh black solid;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap-reverse;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #job-desc {
+        height: auto;
+        width: 100vh;
+        max-width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        align-content: space-evenly;
+        flex-direction: column;
+        text-shadow: -.1vh .1vh .1vh black;
+        color: white;
+    }
+    
+    .menu-bar {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #logo {
+        outline: .5vh tomato solid;
+        position: absolute;
+        bottom: 0;
+        height: 40%;
+    }
+
+    #company-info {
+        max-height: 85%;
+    }
+
+    #short-info {
+        max-width: 100%;
+        align-items: flex-start;
+        justify-content: flex-start;
     }
 }
